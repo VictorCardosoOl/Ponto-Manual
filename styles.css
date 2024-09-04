@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #060303;
+  background-image: linear-gradient(180deg, #060303 17%, #707278 56%, #f9f3f3 82%, #ffffff 97%);
+
+
+  font-family: Poppins, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav {
+  width: 100%;
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hora{
+  color: #f3eff2;
+  font-size: 2rem;
+}
+
+.logo {
+ 
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #f3eff2;
+}
+
+.icon-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.icon-center ion-icon {
+  font-size: 2.5rem;
+  color: #f3eff2;
+}
+
+.github {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f3eff2;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding-top: 6rem; 
+}
+
+
+
+.clock-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  animation: rotate 2s infinite linear;
+}
+
+.clock {
+
+  width: 350px;
+  height: 50px;
+  backdrop-filter: blur(50px);
+  background: var(--surface-color);
+  padding: 13px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 17px;
+  margin-right: 10px;
+  display: flex;
+ 
+  justify-content: center;
+}
+
+.clock:hover {
+  transition: 0.50s ease-in-out;
+  background: #000;
+}
+
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  border-radius: 50px;
+}
+
+.time{
+  display: none;
+}
+
+.btn {
+  backdrop-filter: blur(50px);
+  background: var(--surface-color);
+  border-radius: 50px;
+  width: 75px;
+  height: 45px;
+  cursor: pointer;
+ 
+  border: 1px solid #fff;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+
+
+.btn:hover {
+  transition: 0.60s ease-in-out;
+  background: #000;
+}
+
+
+
+.btn span {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.coppy {
+  color: black;
+  text-decoration: none;
+}
+
