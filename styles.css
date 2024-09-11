@@ -18,6 +18,16 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+cursor{
+  position: fixed;
+  top: calc(var(--cursor-size)*-0.5);
+  left: calc(var(--cursor-size)*-0.5);
+  mix-blend-mode: difference;
+  filter: url(#goo);
+}
+
+
 header {
   width: 100%;
   position: fixed;
@@ -135,3 +145,40 @@ nav {
   text-decoration: none;
 }
 
+
+
+
+
+
+#cursor {
+  position: fixed;
+  top: calc(var(--cursor-size) * -0.5);
+  left:  calc(var(--cursor-size) * -0.5);
+  pointer-events: none;
+  mix-blend-mode: difference;  
+  filter: url(#goo);
+}
+
+.cursor-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  border-radius: var(--cursor-size);
+  background: var(--bg);
+  transform-origin: center center;
+}
+.goo {
+  display: none;
+}
+
+:root {
+  --cursor-size: 28px;
+  --bg: #FAF7EE;
+}
+
+.page-wrap {
+  background: var(--bg);
+  min-height: 100vh;
+}
