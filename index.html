@@ -16,19 +16,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </head>
 
 <body>
-    
+
     <header>
         <nav>
-            <div class="logo"><ion-icon name="timer-outline"></ion-icon></div>
+            
+                <div class="text-input">
+                    <input type="text" id="inputNome" placeholder="Digite um nome..." oninput="atualizarNome()" />
+                </div>
+    
             <main class="hora">
                 <div class="date-container" id="currentDate"></div>
             </main>
-            <a class="github" href="https://github.com/VictorCardosoOl" target="_blank"><ion-icon
-                    name="logo-github"></ion-icon></a>
+            <a class="github" href="https://github.com/VictorCardosoOl" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
         </nav>
     </header>
 
@@ -38,7 +46,7 @@
                 <div class="container">
                     <div class="center">
                         <button class="btn" onclick="copiarTexto('entrada')">
-                            <p>Entrada:<span id="resultadoEntrada"></span>(Victor Cunha)</p>
+                            <p>Entrada: <span id="resultadoEntrada"></span> (<span id="nomePessoaEntrada">Victor Cardoso</span>)</p>
                             <div class="time" id="textoParaCopiarEntrada">12:00:00</div>
                         </button>
                     </div>
@@ -52,7 +60,7 @@
                 <div class="container">
                     <div class="center">
                         <button class="btn" onclick="copiarTexto('almoco')">
-                            <p>Almoço: <span id="resultadoAlmoco"></span> (Victor Cunha)</p>
+                            <p>Almoço: <span id="resultadoAlmoco"></span> (<span id="nomePessoaAlmoco">Victor Cardoso</span>)</p>
                             <div class="time" id="textoParaCopiarAlmoco">12:00:00</div>
                         </button>
                     </div>
@@ -66,7 +74,7 @@
                 <div class="container">
                     <div class="center">
                         <button class="btn" onclick="copiarTexto('cafe')">
-                            <p>Café: <span id="resultadoCafe"></span> (Victor Cunha)</p>
+                            <p>Café: <span id="resultadoCafe"></span> (<span id="nomePessoaCafe">Victor Cardoso</span>)</p>
                             <div class="time" id="textoParaCopiarCafe">12:00:00</div>
                         </button>
                     </div>
@@ -80,7 +88,7 @@
                 <div class="container">
                     <div class="center">
                         <button class="btn" onclick="copiarTexto('retorno')">
-                            <p>Retorno: <span id="resultadoRetorno"></span> (Victor Cunha)</p>
+                            <p>Retorno: <span id="resultadoRetorno"></span> (<span id="nomePessoaRetorno">Victor Cardoso</span>)</p>
                             <div class="time" id="textoParaCopiarRetorno">12:00:00</div>
                         </button>
                     </div>
@@ -94,7 +102,7 @@
                 <div class="container">
                     <div class="center">
                         <button class="btn" onclick="copiarTexto('saida')">
-                            <p>Saída: <span id="resultadoSaida"></span> (Victor Cunha)</p>
+                            <p>Saída: <span id="resultadoSaida"></span> (<span id="nomePessoaSaida">Victor Cardoso</span>)</p>
                             <div class="time" id="textoParaCopiarSaida">12:00:00</div>
                         </button>
                     </div>
@@ -113,13 +121,13 @@
         <defs>
             <filter id="goo">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo"></feColorMatrix>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+                    result="goo"></feColorMatrix>
                 <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
             </filter>
         </defs>
     </svg>
-    
-    
+
 
     <div id="cursor"></div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
