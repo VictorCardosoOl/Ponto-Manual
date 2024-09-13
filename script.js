@@ -106,3 +106,24 @@ document.addEventListener('mousemove', onMouseMove, false);
 
 initCursor();
 updateCursor();
+
+function atualizarNome() {
+  const inputNome = document.getElementById('inputNome').value || 'Victor Cardoso';
+  document.getElementById('nomePessoaEntrada').textContent = inputNome;
+  document.getElementById('nomePessoaAlmoco').textContent = inputNome;
+  document.getElementById('nomePessoaCafe').textContent = inputNome;
+  document.getElementById('nomePessoaRetorno').textContent = inputNome;
+  document.getElementById('nomePessoaSaida').textContent = inputNome;
+
+  // Salva o nome no localStorage
+  localStorage.setItem('nome', inputNome);
+}
+
+// Carrega o nome salvo no localStorage (se houver)
+function carregarNomeSalvo() {
+  const nomeSalvo = localStorage.getItem('nome') || 'Victor Cardoso';
+  document.getElementById('inputNome').value = nomeSalvo;
+  atualizarNome();
+}
+
+window.onload = carregarNomeSalvo;
