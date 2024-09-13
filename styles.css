@@ -8,54 +8,63 @@
 }
 
 body {
-  background-color: #060303;
-  background-image: linear-gradient(180deg, #060303 17%, #707278 56%, #f9f3f3 82%, #ffffff 97%);
-
-
-  font-family: Poppins, sans-serif;
-  height: 100vh;
+  background: linear-gradient(180deg, #060303 17%, #707278 56%, #f9f3f3 82%, #ffffff 97%);
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  color: #f3eff2;
 }
-
-cursor{
-  position: fixed;
-  top: calc(var(--cursor-size)*-0.5);
-  left: calc(var(--cursor-size)*-0.5);
-  mix-blend-mode: difference;
-  filter: url(#goo);
-}
-
 
 header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
-}
-
-nav {
-  width: 100%;
   padding: 0.75rem 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  backdrop-filter: blur(10px);
 }
 
-.hora{
-  color: #f3eff2;
-  font-size: 2rem;
-}
 
-.logo {
- 
+
+.text-input {
   font-size: 2.5rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #f3eff2;
+  display: flex;
+  align-items: center;
+  background: black;
+  color: #fff;
+  padding: 5px;
+  border-radius: 50px;
+  max-width: 200px;
+  margin-left: 5px;
 }
+ 
+
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hora {
+  color: #f3eff2;
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 .icon-center {
   display: flex;
@@ -75,6 +84,7 @@ nav {
   text-decoration: none;
   text-transform: uppercase;
   color: #f3eff2;
+  margin-left: auto;
 }
 
 .main-content {
@@ -119,8 +129,31 @@ nav {
 }
 
 .btn:hover {
+  transform: scale(1.05);
   transition: 0.3s ease-in-out;
   background: #000;
+}
+
+.text-input input {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.text-input:hover input {
+  background: #000;
+  transform: scale(1.05);
 }
 
 .p {
@@ -145,11 +178,6 @@ nav {
   text-decoration: none;
 }
 
-
-
-
-
-
 #cursor {
   position: fixed;
   top: calc(var(--cursor-size) * -0.5);
@@ -157,6 +185,7 @@ nav {
   pointer-events: none;
   mix-blend-mode: difference;  
   filter: url(#goo);
+  z-index: 9999;
 }
 
 .cursor-circle {
@@ -174,7 +203,7 @@ nav {
 }
 
 :root {
-  --cursor-size: 28px;
+  --cursor-size: 30px;
   --bg: #FAF7EE;
 }
 
